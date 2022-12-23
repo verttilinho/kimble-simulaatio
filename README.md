@@ -1,5 +1,5 @@
 # Kimble-simulaatio (ENGLISH BELOW)
-Fortanilla tehty Kimble -simulaatio. Simulaatiossa testataan erilaisten peritaktiikoiden toimivuutta. Tieteellinen laskenta II -kurssin loppuprojekti. 
+Fortanilla tehty Kimble -simulaatio. Simulaatiossa testataan erilaisten peritaktiikoiden toimivuutta. Tieteellinen laskenta II -kurssin loppuprojekti. Simulaation toimivuudesta ei ole takeita. Ainakin se pelailee pelej채, eli se saattaa toimia!
 
 
 # Ajaminen
@@ -49,7 +49,7 @@ Kehitet채채n algoritmi, joka etsii optimaalisen pelistrategian. Lis채ksi lis채t�
 
 # ENGLISH (WORKING PROCESS)
 
-Kimble simulation made with Fortran. This was a course project for Scientific Computing II course.
+Kimble simulation made with Fortran. This was a course project for Scientific Computing II course. There is no guarantees that the simulation works. At least it completes the games, so my hopes are still alive.
 
 # Idea
 
