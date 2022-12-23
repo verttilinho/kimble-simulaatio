@@ -14,8 +14,7 @@ den pelin alkua (1 = kyllä). Viimeinen luku kertoo kuinka monesta pelityylistä
 tehdään satunnainen jokaisella pelikeralla. 1 tarkoittaa, että ensimmäiseksi an-
 nettu pelityyli pysyy samana ja muut arvotaan jokaisella pelikerralla uudestaan.
 2 tarkoittaa, että kaikki pelityylit arvotaan jokaisella iteraatiokerralla.
-Taktiikka i.dat (missä i = 1, 2, 3, 4) sisältää reaalilukujaväliltä [0, 100]. Lu-
-vut kuvaavat datatyypin pelityyli alkiota. Ne luetaan järjestyksessä: persoona,
+Taktiikka i.dat (missä i = 1, 2, 3, 4) sisältää reaalilukujaväliltä [0, 100]. Luvut kuvaavat datatyypin pelityyli alkiota. Ne luetaan järjestyksessä: persoona,
 uusi1, uusi12, uusi3, aja, syo , maaliin, etene (ei kuus) , etene kuus, etene toisen
 lahto, vaara, vaara (ei liiku), ja markov.
 
