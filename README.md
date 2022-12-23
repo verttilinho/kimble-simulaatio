@@ -9,10 +9,8 @@ kansioon run ja syöttämällä komennon ./a.out taktiikka 1.dat taktiikka 2.dat
 taktiikka 3.dat taktiikka 4.dat asetukset.dat
 
 Asetukset.dat sisältää kolme kokonaislukua. Ensimmäinen on simuloitavien
-pelien lukumäärä. Toinen luku kertoo arvotaanko pelaajien järjestys ennen uu-
-den pelin alkua (1 = kyllä). Viimeinen luku kertoo kuinka monesta pelityylistä
-tehdään satunnainen jokaisella pelikeralla. 1 tarkoittaa, että ensimmäiseksi an-
-nettu pelityyli pysyy samana ja muut arvotaan jokaisella pelikerralla uudestaan.
+pelien lukumäärä. Toinen luku kertoo arvotaanko pelaajien järjestys ennen uuden pelin alkua (1 = kyllä). Viimeinen luku kertoo kuinka monesta pelityylistä
+tehdään satunnainen jokaisella pelikeralla. 1 tarkoittaa, että ensimmäiseksi annettu pelityyli pysyy samana ja muut arvotaan jokaisella pelikerralla uudestaan.
 2 tarkoittaa, että kaikki pelityylit arvotaan jokaisella iteraatiokerralla.
 Taktiikka i.dat (missä i = 1, 2, 3, 4) sisältää reaalilukujaväliltä [0, 100]. Luvut kuvaavat datatyypin pelityyli alkiota. Ne luetaan järjestyksessä: persoona,
 uusi1, uusi12, uusi3, aja, syo , maaliin, etene (ei kuus) , etene kuus, etene toisen
