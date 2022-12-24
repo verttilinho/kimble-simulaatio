@@ -31,7 +31,9 @@ Kannattanee tehdä oma virtuaaliympäristö: requirements.txt sisältää tarvit
 Näin (abaut) se hoituu
 
 python3 -m venv kimble-venv
+
 source kimble-venv/bin/activate
+
 python3 -m pip install -r requirements.txt
 
 Lisätietoa: https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/ 
