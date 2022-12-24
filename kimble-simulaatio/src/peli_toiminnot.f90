@@ -208,6 +208,11 @@ subroutine sihteeri(sijoitus, pelittelija)
     implicit none
     type(pelaaja_tiedot) :: pelittelija
     integer :: sijoitus
+    !jos ei olla vielä pelattu yhtäkään peliä, sihteeri alustaa
+    !voittajat.txt tiedoston
+    if (pelatut_pelit == 0) then
+        call voittotiedoston_alustus("voittajat.txt")
+    end if
     !koska sihteeriä kutsutaan neljästi, siksi lisätään 0.25
     pelatut_pelit=pelatut_pelit+0.25
     if (sijoitus == 1) then
@@ -230,6 +235,8 @@ subroutine sihteeri(sijoitus, pelittelija)
 
 end subroutine
 
+
+
 !aliohjelma, jolla tallennetaan voittolista tiedostoon
 subroutine voittojen_tallennus(lista)
     implicit none
@@ -239,8 +246,17 @@ subroutine voittojen_tallennus(lista)
 
     open(unit=1,file=tiedosto)
     write(1,*) lista
+
 end subroutine
 
+subroutine voittotiedoston_alustus(tiedosto)
+    implicit none
+    character(len=13),intent(in) :: tiedosto
+
+    open(unit=1, file=tiedosto)
+
+    write(1,*) "        pelaaja1 pelaaja2 pelaaja3 pelaaja4"
+end subroutine
 
 
 end module
