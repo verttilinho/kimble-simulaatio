@@ -2,11 +2,7 @@ import bar_chart_race as bcr
 import pandas as pd 
 
 df = pd.read_table("voittajat.txt",delim_whitespace=True)
-df.loc[-1] = ["Pelaaja1","Pelaaja2","Pelaaja3","Pelaaja4"]  # adding a row
-df.index = df.index + 1  # shifting index
 df.sort_index(inplace=True) 
-# df = bcr.load_dataset('covid19_tutorial')
-print(df)
 bcr.bar_chart_race(
     df=df,
     filename='kimblekisa.mp4',
