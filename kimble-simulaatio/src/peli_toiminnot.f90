@@ -252,10 +252,12 @@ end subroutine
 subroutine voittotiedoston_alustus(tiedosto)
     implicit none
     character(len=13),intent(in) :: tiedosto
+    integer                      :: alku(4) = 0
 
     open(unit=1, file=tiedosto)
 
     write(1,*) "        pelaaja1 pelaaja2 pelaaja3 pelaaja4"
+    write(1,*) alku
 end subroutine
 
 
