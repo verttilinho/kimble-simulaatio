@@ -1,5 +1,5 @@
 # Kimble-simulaatio (ENGLISH BELOW)
-Fortanilla tehty Kimble -simulaatio. Simulaatiossa testataan erilaisten peritaktiikoiden toimivuutta. Tieteellinen laskenta II -kurssin loppuprojekti. Simulaation toimivuudesta ei ole takeita. Ainakin se pelailee pelejä, eli se saattaa toimia!
+Fortanilla tehty Kimble -simulaatio. Simulaatiossa testataan erilaisten peritaktiikoiden toimivuutta. Tieteellinen laskenta II -kurssin loppuprojekti, jota jalostetaan. Simulaation toimivuudesta ei ole takeita. Ainakin se pelailee pelejä, eli se saattaa toimia!
 
 
 # Ajaminen
