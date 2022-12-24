@@ -11,6 +11,11 @@ type pelaaja_tiedot
     integer :: id, sija_1, sija_2, sija_3, sija_4, sija_nykyinen
 end type
 
+!alustetaan laskuri pelattujen pelien määrälle. Tätä
+!käytetään voittojen tallentamisessa
+real :: pelatut_pelit = 0
+integer :: voitot(4) = 0
+
 
 
 contains
@@ -203,10 +208,16 @@ subroutine sihteeri(sijoitus, pelittelija)
     implicit none
     type(pelaaja_tiedot) :: pelittelija
     integer :: sijoitus
-
+    !koska sihteeriä kutsutaan neljästi, siksi lisätään 0.25
+    pelatut_pelit=pelatut_pelit+0.25
     if (sijoitus == 1) then
         pelittelija%sija_1 = pelittelija%sija_1 + 1
-
+        voitot(pelittelija%id) = voitot(pelittelija%id) + 1
+        !"aina välillä" tallennetaan tämä voitot vektori tiedostoon:
+        !lukua 100 voi muokata, jos näyttää siltä että tallennetaan liikaa dataa.
+        if (modulo(nint(pelatut_pelit),500)==0) then
+            call voittojen_tallennus(voitot)
+        end if
     else if (sijoitus == 2) then
         pelittelija%sija_2 = pelittelija%sija_2 + 1
     
@@ -217,6 +228,17 @@ subroutine sihteeri(sijoitus, pelittelija)
         pelittelija%sija_4 = pelittelija%sija_4 + 1
     end if
 
+end subroutine
+
+!aliohjelma, jolla tallennetaan voittolista tiedostoon
+subroutine voittojen_tallennus(lista)
+    implicit none
+    integer, intent(in) :: lista(4)
+    character(len=13)   :: tiedosto = "voittajat.txt"
+    
+
+    open(unit=1,file=tiedosto)
+    write(1,*) lista
 end subroutine
 
 
