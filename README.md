@@ -20,13 +20,23 @@ Ohjelma tuottaa neljä tiedostoa Pelitaktiikka_1_tulokset.txt, Pelitaktiikka_2_t
 Pelitaktiikka_3_tulokset.txt, Pelitaktiikka_4_tulokset.txt, mitkä sisältävät jokaisen
 pelitaktiikan sijoitusjakaumafrekvenssit.
 
-Tulokset voi visualisoida ohjelmalla tulosten visualisointi.py (ajo: python3
-tulosten visualisointi.py)
 
 # Koostaminen
 ./kooste.sh
 
+# Python hommat
 
+Kannattanee tehdä oma virtuaaliympäristö: requirements.txt sisältää tarvittavat kirjastot. 
+
+Näin (abaut) se hoituu
+
+python3 -m venv kimble-venv
+source kimble-venv/bin/activate
+python3 -m pip install -r requirements.txt
+
+Lisätietoa: https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/ 
+
+Tulokset voi visualisoida ohjelmalla tulosten visualisointi.py. Ohjelmalla barchart.py saa tehtyä videon pelaajien voittojakaumasta. 
 
 # Simulaation idea
 
