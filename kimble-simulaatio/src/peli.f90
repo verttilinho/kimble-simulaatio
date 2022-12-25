@@ -12,6 +12,7 @@ integer, allocatable :: heitto_lkm(:)
 type(pelaaja_tiedot), dimension(4) :: pelittelija, pelittelija_valmis
 real(rk), dimension(6,6) :: todarit
 character(len = 80) :: arg
+character :: valinta
 
 
 ! Luoteaan ajoasetukset
@@ -139,7 +140,16 @@ call tulostus(pelittelija_valmis, pelien_lkm, heitto_lkm)
 call tallennus(pelittelija_valmis)
 
 
+print*, "Haluatko animoida tulokset? (y/n)"
+read*, valinta
 
+if (valinta=="y") then
+    print*, "Animoidaan..."
+    call execute_command_line("python3 barchart.py")
+    print*, "Valmis!"
+else
+    print*, "Ei animoida"
+end if
 
 
 end program peli
